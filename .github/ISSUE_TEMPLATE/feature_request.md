@@ -1,3 +1,12 @@
+---
+name: Issue request
+about: Suggest an idea for this project
+title: Issue - Title of the new issue
+labels: issue
+assignees: ''
+ 
+---
+
 ## Description
 <!-- Describe the problem, feature request, or improvement -->
 
