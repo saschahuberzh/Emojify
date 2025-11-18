@@ -7,7 +7,6 @@ Closes #
 
 ## How to Test
 <!-- Step-by-step instructions for reviewers to test the changes -->
-
 1.
 2.
 3.
@@ -16,7 +15,7 @@ Closes #
 <!-- Optional: List the key technical changes -->
 -
 
-## ✔️ Checklist
+## Checklist
 - [ ] My code works without errors
 - [ ] I added or updated tests (if applicable)
 - [ ] I updated documentation or README (if needed)

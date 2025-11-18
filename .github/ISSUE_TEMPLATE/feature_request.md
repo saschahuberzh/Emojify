@@ -19,11 +19,10 @@ assignees: ''
 - [ ] Criteria 2
 - [ ] Criteria 3
 
+## Checklist
+- [ ] Task 1
+- [ ] Task 2
+- [ ] Task 3
+
 ## Additional Information
 <!-- Logs, error messages, notes, links, related issues -->
-
-## ✔️ Checklist
-- [ ] Description is clear
-- [ ] Acceptance Criteria added
-- [ ] No duplicate issue exists
-- [ ] Additional Information added (if helpful)
