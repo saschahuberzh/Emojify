@@ -18,7 +18,7 @@ Emojify has been designed for ease of use from the start.
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/saschahuberzh/Emojify.git](https://github.com/saschahuberzh/Emojify.git)
+    git clone https://github.com/saschahuberzh/Emojify.git
     ```
 2.  Navigate to the project directory:
     ```bash
