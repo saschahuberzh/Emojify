@@ -40,7 +40,7 @@ You can find the usage guide below.
 
 We have a simple example to get you started. Here is the command to run the tool:
 
-```bash
+
 java -jar target/emojify-1.0.jar "Hello world I love java and pizza"
 
 **Output:**
