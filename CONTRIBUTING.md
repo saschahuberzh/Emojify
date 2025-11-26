@@ -11,21 +11,6 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Refer this project in your project's readme
 > - Mention the project at local meetups and tell your friends/colleagues
 
-<!-- omit in toc -->
-## Table of Contents
-
-- [I Have a Question](#i-have-a-question)
-- [I Want To Contribute](#i-want-to-contribute)
-- [Reporting Bugs](#reporting-bugs)
-- [Suggesting Enhancements](#suggesting-enhancements)
-- [Your First Code Contribution](#your-first-code-contribution)
-- [Improving The Documentation](#improving-the-documentation)
-- [Styleguides](#styleguides)
-- [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
-
-
-
 ## I Have a Question
 
 > If you want to ask a question, we assume that you have read the available [Documentation](https://github.com/saschahuberzh/Emojify?tab=readme-ov-file#readme).
@@ -129,25 +114,55 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/sascha
 <!-- You might want to create an issue template for enhancement suggestions that can be used as a guide and that defines the structure of the information to be included. If you do so, reference it here in the description. -->
 
 ### Your First Code Contribution
-<!-- TODO
-include Setup of env, IDE and typical getting started instructions?
-
--->
-
-### Improving The Documentation
-<!-- TODO
-Updating, improving and correcting the documentation
-
--->
+Setup the project like metnioned in the readme file and use the branching strategy mentioned below.
 
 ## Styleguides
 ### Commit Messages
-<!-- TODO
 
--->
+Please follow these simple guidelines for commit messages:
 
-## Join The Project Team
-<!-- TODO -->
+- **Use clear and descriptive messages**
+  - Good: `Fix emoji parsing for multi-codepoint sequences`
+  - Bad: `fix stuff`
+
+- **Reference the related issue number (if applicable)**
+  - Example: `Add emoji classification (#12)`
+
+These rules keep the commit history clean and easy to understand.
+
+## Branching Strategy
+
+This project uses a simple and lightweight branching strategy based on GitHub Flow.
+
+### Main Branch
+- **main**  
+  The stable branch. All production-ready and reviewed code lives here.  
+  No direct commits to `main` are allowed.
+
+### Feature Branches
+For every change, bug fix, or enhancement, create a dedicated feature branch:
+
+- Branch name format:  
+  `feature/<issue-number>-<short-description>`  
+  Examples:  
+  `feature/12-add-emoji-parser`  
+  `feature/34-fix-unicode-bug`
+
+### Workflow
+1. Open or assign yourself an Issue.  
+2. Create a new feature branch from `main`.  
+3. Implement your changes in that branch.  
+4. Push the branch and open a Pull Request targeting `main`.  
+5. Ensure all tests pass and follow the project’s style guidelines.  
+6. A maintainer reviews and merges the PR once approved.
+
+### Rules
+- Never commit directly to `main`.  
+- One feature branch per Issue.  
+- Keep PRs small and focused on a single change.  
+- Delete the feature branch after merging (GitHub does this automatically if enabled).
+
+This simple branching strategy keeps the repository clean, easy to manage, and beginner-friendly.
 
 <!-- omit in toc -->
 ## Attribution
