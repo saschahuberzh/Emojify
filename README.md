@@ -25,7 +25,7 @@ From maven:
 mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
 
 From the compiled jar
-java -jar target/emojify-1.0-SNAPSHOT.jar "Hello world I love java and pizza"
+java -jar target/Emojify-1.0-SNAPSHOT.jar "Hello world I love java and pizza"
 
 Execute unit tests to ensure everithing is working
 mvn test
