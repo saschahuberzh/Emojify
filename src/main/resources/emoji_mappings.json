@@ -59,6 +59,11 @@
 
   "pizza": "🍕",
   "slice": "🍕",
-  "pepperoni": "🍕"
+  "pepperoni": "🍕",
+
+  "ghost": "👻",
+
+  "check": "✅",
+  "done": "✅"
 
 }
