@@ -6,6 +6,8 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 * **Data-Driven:** Build an extensive emoji dictionary without touching the code. Since mapping logic is separated into a JSON file, you can easily contribute new emojis and keep the logic clean.
 * **Run Anywhere:** We don't make assumptions about your OS. As long as you have Java installed, you can run Emojify anywhere—from your local terminal to a server environment.
 
+------------------------------------------------------------------
+
 ## Installation
 
 Emojify has been designed for ease of use from the start.
@@ -13,6 +15,21 @@ Emojify has been designed for ease of use from the start.
 **Prerequisites:**
 * Java JDK 17 or higher
 * Maven
+
+------------------------------------------------------------------
+
+## How ro run the Project
+You can run the main application with IntelliJ, via Maven orthe Jar
+
+From maven:
+mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
+
+From the compiled jar
+java -jar target/Emojify-1.0-SNAPSHOT.jar "Hello world I love java and pizza"
+
+Execute unit tests to ensure everithing is working
+mvn test
+
 
 **Build from source:**
 
@@ -29,6 +46,8 @@ Emojify has been designed for ease of use from the start.
     mvn package
     ```
 
+------------------------------------------------------------------
+
 ## Documentation
 
 You can find the usage guide below.
@@ -43,11 +62,15 @@ We have a simple example to get you started. Here is the command to run the tool
 
 java -jar target/emojify-1.0.jar "Hello world I love java and pizza"
 
+------------------------------------------------------------------
+
 **Output:**
 
 > 👋 world I ❤️ ☕ and 🍕
 
 You'll notice that keywords like **"Hello"**, **"love"**, **"java"**, and **"pizza"** were automatically translated.
+
+------------------------------------------------------------------
 
 ## Contributing
 
@@ -65,6 +88,8 @@ We have adopted a **Code of Conduct** that we expect project participants to adh
 ### 🏷️ Good First Issues
 
 To help you get your feet wet, we have a list of **Good First Issues** on our board. Adding new emojis to the JSON file is a great place to get started.
+
+------------------------------------------------------------------
 
 ## 📝 License
 
