@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Paths; 
 
 import java.lang.reflect.Type ;
@@ -19,7 +20,7 @@ public class EmojiDictionary{
         this.emojies = new HashMap<>() ;
     }
 
-    public void load(String fileLocation){
+    public void load(String fileLocation) throws IOException {
         Gson gson = new Gson();
         try(FileReader reader = new FileReader(Paths.get(fileLocation).toFile())){
 
@@ -41,9 +42,21 @@ public class EmojiDictionary{
             }
 
         }
+        catch(IOException e){
+            System.out.println("Error : file is not exist");
+        }
         catch(Exception e){
             System.out.println("Error : "+e.getMessage());
         }
     }
+
+    // This is a helper method to verify that the load() method is working properly.
+    // This method returns an unmodifiable Map instance.
+    // Attempting put/remove from outside will result in an UnsupportedOperationException.
+    // The next issue will create the correct method to access the map.
+    public Map<String, String> getEmojies() {
+        return Collections.unmodifiableMap(this.emojies);
+    }
+    
 
 }
