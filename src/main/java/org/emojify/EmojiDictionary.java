@@ -5,9 +5,10 @@ import java.util.* ;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.FileReader;
+import java.io.Reader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
-import java.nio.file.Paths; 
 
 import java.lang.reflect.Type ;
 import java.lang.Character ;
@@ -22,7 +23,13 @@ public class EmojiDictionary{
 
     public void load(String fileLocation) throws IOException {
         Gson gson = new Gson();
-        try(FileReader reader = new FileReader(Paths.get(fileLocation).toFile())){
+
+        InputStream inputStream = getClass().getResourceAsStream(fileLocation);
+    
+        if (inputStream == null) {
+            throw new IOException("Error: Resource not found in classpath: " + fileLocation);
+        }
+        try(Reader reader = new InputStreamReader(inputStream)){
 
             // emojies = (HashMap) gson.fromJson(reader, emojies.getClass());
             Type type = new TypeToken<HashMap<String, String>>() {}.getType(); // I am not sure which one is better to use, HashMap or Map?
