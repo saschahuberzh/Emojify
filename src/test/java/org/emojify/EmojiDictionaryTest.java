@@ -23,7 +23,7 @@ public class EmojiDictionaryTest {
 
 
     @Test // happy path test : it should contain all key:value pairs
-    void testLoad() {
+    void testLoad() throws IOException {
         String filePath = "/simpletTesfile.json";
         dictionary.load(filePath) ;
         Map<String, String> resultMap = dictionary.getEmojies();
@@ -38,8 +38,7 @@ public class EmojiDictionaryTest {
     }
 
     @Test // when file location is not exist, it should return empty HashMap (bad end case)
-    void testNotExistFile()
-    {
+    void testNotExistFile() throws IOException {
         String filePath = "/noSuchFile.json";
         dictionary.load(filePath) ;
         Map<String, String> resultMap = dictionary.getEmojies();
@@ -51,7 +50,7 @@ public class EmojiDictionaryTest {
     }
 
     @Test // when file is empty, it should return empty HashMap (bad end case)
-    void testEmptyFile(){
+    void testEmptyFile() throws IOException {
 
         String filePath = "/empty.json";
         dictionary.load(filePath) ;
