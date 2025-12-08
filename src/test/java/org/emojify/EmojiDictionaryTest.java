@@ -1,5 +1,7 @@
 package org.emojify;
 
+import java.util.Map;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,18 +22,43 @@ public class EmojiDictionaryTest {
 
     @Test // happy path test : it should contain all key:value pairs
     void testLoad() {
+        String filePath = "/simpletTesfile.json";
+        dictionary.load(filePath) ;
+        Map<String, String> resultMap = dictionary.getEmojies();
 
+        Map<String, String> expectedMap = new HashMap<>();
+        expectedMap.put("love", "❤️");
+        expectedMap.put("fire", "🔥");
+        expectedMap.put("done", "✅");
+
+        assertEquals(expectedMap, resultMap, "The resulting Map does not match the expected Map.");
 
     }
 
     @Test // when file location is not exist, it should return empty HashMap (bad end case)
     void testNotExistFile()
     {
+        String filePath = "/noSuchFile.json";
+        dictionary.load(filePath) ;
+        Map<String, String> resultMap = dictionary.getEmojies();
+
+        Map<String, String> expectedMap = new HashMap<>(); // the result should be empty map
+
+        assertEquals(expectedMap, resultMap, "The resulting Map does not match the expected Map.");
 
     }
 
     @Test // when file is empty, it should return empty HashMap (bad end case)
     void testEmptyFile(){
+
+        String filePath = "/empty.json";
+        dictionary.load(filePath) ;
+        Map<String, String> resultMap = dictionary.getEmojies();
+
+        Map<String, String> expectedMap = new HashMap<>(); // the result should be empty map
+
+        assertEquals(expectedMap, resultMap, "The resulting Map does not match the expected Map.");
+
 
     }
 }
