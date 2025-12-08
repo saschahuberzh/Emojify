@@ -27,15 +27,18 @@ public class EmojiDictionary{
         InputStream inputStream = getClass().getResourceAsStream(fileLocation);
     
         if (inputStream == null) {
-            throw new IOException("Error: Resource not found in classpath: " + fileLocation);
+            return ;
         }
         try(Reader reader = new InputStreamReader(inputStream)){
 
             // emojies = (HashMap) gson.fromJson(reader, emojies.getClass());
             Type type = new TypeToken<HashMap<String, String>>() {}.getType(); // I am not sure which one is better to use, HashMap or Map?
 
-            this.emojies = gson.fromJson(reader, type);
+            Map<String, String> testMap = gson.fromJson(reader, type);
+            if(testMap != null){
+                this.emojies = testMap ; 
 
+            }
 
             // if the value is not an emoji, remove the pair from the map
             Iterator<Map.Entry<String, String>> iter = emojies.entrySet().iterator() ;
