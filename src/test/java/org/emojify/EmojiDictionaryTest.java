@@ -1,6 +1,7 @@
 package org.emojify;
 
 import java.util.Map;
+import java.util.HashMap;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
