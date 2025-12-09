@@ -26,7 +26,7 @@ public class ConsoleInterface {
         for (int i = 0; i < options.size(); i++) {
             System.out.println((i + 1) + ") " + options.get(i));
         }
-        return readIntInRange("Chosen", 1, options.size());
+        return readIntInRange("Choose one of the number above.", 1, options.size());
     }
 
     public int readIntInRange(String prompt, int min, int max) {
