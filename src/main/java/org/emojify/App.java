@@ -31,7 +31,9 @@ public class App {
                 case 1 -> {
                     String text = console.readLine("Add text to parse to emoji:");
                     String translatedText = translator.toEmoji(text);
-                    console.print(translatedText);
+                    console.print(translatedText + "\n");
+                    // Copy result to clipboard
+                    console.copyToClipboard(translatedText); 
                 }
 
                 case 2 -> {

@@ -2,6 +2,11 @@ package org.emojify;
 
 import java.util.List;
 import java.util.Scanner;
+//
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.HeadlessException;
 
 public class ConsoleInterface {
 
@@ -53,5 +58,29 @@ public class ConsoleInterface {
 
     public void close() {
         scanner.close();
+    }
+
+    // Copy the string to the system clipboard.
+    public void copyToClipboard(String text) {
+        try {
+            // 1. Get the system clipboard
+            Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+
+            // 2. Create a transferable string selection
+            StringSelection selection = new StringSelection(text);
+
+            // 3. Set the clipboard contents
+            clipboard.setContents(selection, null);
+
+            // 4. Print success message
+            System.out.println("(✨ Copied to clipboard!)");
+
+        } catch (HeadlessException e) {
+            // Handle environments without a display (e.g., CI servers, headless linux)
+            System.out.println("Note: Clipboard is unavailable in this environment (Headless).");
+        } catch (Exception e) {
+            // Handle other unexpected errors
+            System.out.println("Failed to copy to clipboard: " + e.getMessage());
+        }
     }
 }
