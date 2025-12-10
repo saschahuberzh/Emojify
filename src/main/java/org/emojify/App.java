@@ -9,7 +9,7 @@ public class App {
         EmojiDictionary dictionary = new EmojiDictionary();
 
         try {
-            dictionary.load("/emoji_mapping.json");
+            dictionary.load("/emoji_mappings.json");
         } catch (IOException e) {
             console.print("Error loading dictionary: " + e.getMessage());
         }
