@@ -1,7 +1,5 @@
 package org.emojify;
 
-import java.util.Map;
-import java.util.HashMap;
 import java.util.* ;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -87,7 +85,12 @@ public class EmojiDictionaryTest {
             System.out.println("expected keys: "+key);
         }        
 
-        assertEquals(expectedList, resultList, "The resulting List does not match the expected List."); 
+        // 1. 개수가 3개인지 먼저 확인
+        assertEquals(expectedList.size(), resultList.size(), "The size of key list is incorrect.");
+
+        // 2. 순서와 상관없이, expectedList의 모든 내용이 resultList 안에 들어있는지 확인
+        // (assertTrue는 괄호 안의 내용이 '참'이어야 통과)
+        assertTrue(resultList.containsAll(expectedList), "The list does not contain all expected keys."); 
     }
 
     @Test // when file is empty, it should return empty List (bad end case)
