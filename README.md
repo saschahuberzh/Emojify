@@ -13,7 +13,7 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 Emojify has been designed for ease of use from the start.
 
 **Prerequisites:**
-* Java JDK 17 or higher
+* Java JDK 21 or higher
 * Maven
 
 ------------------------------------------------------------------
