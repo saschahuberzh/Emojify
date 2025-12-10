@@ -27,6 +27,7 @@ public class EmojiDictionary{
         InputStream inputStream = getClass().getResourceAsStream(fileLocation);
     
         if (inputStream == null) {
+            System.out.println("ERROR: Could not find file at: " + fileLocation);
             return ;
         }
         try(Reader reader = new InputStreamReader(inputStream)){
