@@ -26,7 +26,7 @@ public class EmojiDictionaryTest {
 
     @Test // happy path test : it should contain all key:value pairs
     void testLoad() throws IOException {
-        String filePath = "/simpletTesfile.json";
+        String filePath = "/simpleTestFile.json";
         dictionary.load(filePath) ;
         Map<String, String> resultMap = dictionary.getEmojies();
 
