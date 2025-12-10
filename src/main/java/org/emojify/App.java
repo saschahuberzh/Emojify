@@ -30,8 +30,8 @@ public class App {
 
                 case 1 -> {
                     String text = console.readLine("Add text to parse to emoji:");
-                    //call method to parse
-                    console.print(text);
+                    String translatedText = translator.toEmoji(text);
+                    console.print(translatedText);
                 }
 
                 case 2 -> {
