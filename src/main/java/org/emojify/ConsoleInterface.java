@@ -35,7 +35,7 @@ public class ConsoleInterface {
             if (value >= min && value <= max) {
                 return value;
             }
-            System.out.println("Please chose a number between " + min + " and " + max + ".");
+            System.out.println("Please choose a number between " + min + " and " + max + ".");
         }
     }
 
