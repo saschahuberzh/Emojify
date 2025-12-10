@@ -1,13 +1,23 @@
 package org.emojify;
-
+import java.io.IOException;
 import java.util.List;
 
 public class App {
     public static void main(String[] args) {
 
         ConsoleInterface console = new ConsoleInterface();
+        EmojiDictionary dictionary = new EmojiDictionary();
+
+        try {
+            dictionary.load("/emoji_mapping.json");
+        } catch (IOException e) {
+            console.print("Error loading dictionary: " + e.getMessage());
+        }
+
+        //create translator
+        Translator translator = new Translator(dictionary.getEmojies());
+
         boolean running = true;
-        //read word from json
 
         while (running) {
 

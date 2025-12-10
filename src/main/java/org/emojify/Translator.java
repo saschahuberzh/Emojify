@@ -1,5 +1,6 @@
 package org.emojify;
 import java.util.Map;
+import java.util.HashMap;
 
 public class Translator{
     //logic issue3
@@ -15,6 +16,7 @@ public class Translator{
             return "";
         }
         StringBuilder result = new StringBuilder();
+        String[] words = sentence.split("\\s");
 
         //iteration
         for (String word : words){
