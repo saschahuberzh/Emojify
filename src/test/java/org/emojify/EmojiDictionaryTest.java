@@ -2,6 +2,7 @@ package org.emojify;
 
 import java.util.Map;
 import java.util.HashMap;
+import java.util.* ;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -62,6 +63,55 @@ public class EmojiDictionaryTest {
 
         assertEquals(expectedMap, resultMap, "The resulting Map does not match the expected Map.");
 
+
+    }
+
+    // Add test files about getKeys() function
+
+    @Test // happy path test : when loading file with no problem_it should return all keys and I should be able to iterate through it
+    void testGetKeys() throws IOException{
+        String filePath = "/simpleTestFile.json";
+        dictionary.load(filePath) ;
+        List<String> resultList = dictionary.getKeys();
+
+        List<String> expectedList = new ArrayList<>() ;
+        expectedList.add("love");
+        expectedList.add("fire");
+        expectedList.add("done");
+
+        for(String key : resultList){
+            System.out.println("key in dictionary: "+key);
+        }
+        System.out.println("");
+        for(String key : expectedList){
+            System.out.println("expected keys: "+key);
+        }        
+
+        assertEquals(expectedList, resultList, "The resulting List does not match the expected List."); 
+    }
+
+    @Test // when file is empty, it should return empty List (bad end case)
+    void testEmptyFileGetKeys() throws IOException {
+
+        String filePath = "/empty.json";
+        dictionary.load(filePath) ;
+        List<String> resultList = dictionary.getKeys();
+
+        List<String> expectedList = new ArrayList<>(); // the result should be empty list
+
+        assertEquals(expectedList, resultList, "The resulting List does not match the expected List.");
+
+    }
+    
+    @Test // when file location is not exist, it should return empty HashMap (bad end case)
+    void testNotExistFileGetKeys() throws IOException {
+        String filePath = "/noSuchFile.json";
+        dictionary.load(filePath) ;
+        List<String> resultList = dictionary.getKeys();
+
+        List<String> expectedList = new ArrayList<>(); // the result should be empty list
+
+        assertEquals(expectedList, resultList, "The resulting List does not match the expected List.");
 
     }
 }

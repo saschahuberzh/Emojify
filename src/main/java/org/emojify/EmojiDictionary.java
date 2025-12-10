@@ -68,6 +68,14 @@ public class EmojiDictionary{
     public Map<String, String> getEmojies() {
         return Collections.unmodifiableMap(this.emojies);
     }
-    
+
+    public List<String> getKeys(){
+        List<String> returnList = new ArrayList<>();
+        for(Map.Entry<String, String> emojipair : this.emojies.entrySet()){
+            returnList.add(emojipair.getKey());
+        }
+        return returnList ;
+    }
+
 
 }
