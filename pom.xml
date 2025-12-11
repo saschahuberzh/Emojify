@@ -42,11 +42,7 @@
                     <archive>
                         <manifest>
                             <mainClass>org.emojify.App</mainClass>
-                            <addDefaultEntries>true</addDefaultEntries> 
-                
-                            <addClasspath>true</addClasspath> 
-                            <addExtensions>true</addExtensions>
-                            <addBuildNumber>false</addBuildNumber>
+            
                         </manifest>
                     </archive>
                 </configuration>
@@ -75,6 +71,9 @@
                                     <mainClass>org.emojify.App</mainClass> 
                                 </transformer>
                             </transformers>
+                                <manifestEntries>
+                                    <JAVA_TOOL_OPTIONS>-Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8</JAVA_TOOL_OPTIONS>
+                                </manifestEntries>                            
                             <finalName>EmojifyApp</finalName> 
                         </configuration>
                     </execution>
