@@ -42,6 +42,11 @@
                     <archive>
                         <manifest>
                             <mainClass>org.emojify.App</mainClass>
+                            <addDefaultEntries>true</addDefaultEntries> 
+                
+                            <addClasspath>true</addClasspath> 
+                            <addExtensions>true</addExtensions>
+                            <addBuildNumber>false</addBuildNumber>
                         </manifest>
                     </archive>
                 </configuration>
@@ -74,22 +79,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version> 
-                <configuration>
-                    <mainClass>org.emojify.App</mainClass>
-                    <encoding>UTF-8</encoding> 
-                    <systemProperties>
-                        <systemProperty>
-                            <key>file.encoding</key>
-                            <value>UTF-8</value>
-                        </systemProperty>
-                    </systemProperties>
-                </configuration>
             </plugin>
             
         </plugins>
