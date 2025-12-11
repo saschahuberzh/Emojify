@@ -20,14 +20,11 @@ Emojify has been designed for ease of use from the start.
 
 ## How ro run the Project
 You can run the main application with IntelliJ, via Maven orthe Jar
+You should finish Build from source before running this Project.
 
 From maven:
 ```bash
-<<<<<<< HEAD
-mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
-=======
-    mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
->>>>>>> 7f2192a3bd3c22d3d3fe7b13c3ca3bd5904a7565
+    mvn exec:java -Dexec.mainClass=org.emojify.App
 ```
 
 From the compiled jar
@@ -52,8 +49,12 @@ mvn test
     ```
 3.  Build the project using Maven:
     ```bash
-    mvn package
+    mvn clean package
     ```
+4. Console encoding settings
+    1. cmd : `chcp 65001`
+    2. PowerShell : `$OutputEncoding = [System.Text.Encoding]::UTF8`
+
 
 ------------------------------------------------------------------
 
@@ -68,14 +69,11 @@ You can find the usage guide below.
 
 We have a simple example to get you started. Here is the command to run the tool:
 
-<<<<<<< HEAD
 
-java -jar target/EmojifyApp.jar
-=======
 ```bash
 java -jar target/EmojifyApp.jar
 ```
->>>>>>> 7f2192a3bd3c22d3d3fe7b13c3ca3bd5904a7565
+
 
 ------------------------------------------------------------------
 
