@@ -37,6 +37,17 @@ public class App {
                 }
 
                 case 2 -> {
+                    console.print("Available words that can be converted to emojis:");
+
+                    // use existing getKeys()
+                    for (String word : dictionary.getKeys()) {
+                        console.print("- " + word);
+                    }
+
+                    console.print("");
+                }
+
+                case 3 -> {
                     running = false;
                     console.print("Closing app ...");
                     console.close();
