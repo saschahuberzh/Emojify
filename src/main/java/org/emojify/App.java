@@ -23,7 +23,8 @@ public class App {
 
             int choice = console.showMenu("Menu", List.of(
                     "Parse emoji",
-                    "Finish app"
+                    "Finish app",
+                    "List all emojis"
             ));
 
             switch (choice) {
@@ -41,6 +42,18 @@ public class App {
                     console.print("Closing app ...");
                     console.close();
                 }
+
+                case 3 -> {
+                    console.print("Available words that can be converted to emojis:");
+
+                    // use existing getKeys()
+                    for (String word : dictionary.getKeys()) {
+                        console.print("- " + word);
+                    }
+
+                    console.print("");
+                }
+
             }
         }
     }
