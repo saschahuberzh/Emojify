@@ -5,6 +5,31 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 * **Expressive:** Emojify makes it painless to add emotions to your text. Design simple mappings in JSON, and Emojify will efficiently update your sentences with the right emojis.
 * **Data-Driven:** Build an extensive emoji dictionary without touching the code. Since mapping logic is separated into a JSON file, you can easily contribute new emojis and keep the logic clean.
 * **Run Anywhere:** We don't make assumptions about your OS. As long as you have Java installed, you can run Emojify anywhere—from your local terminal to a server environment.
+------------------------------------------------------------------
+# Project Structure
+│
+├── src/
+│   ├── main/
+│   │   ├── java/org/emojify/      
+│   │   │   ├── App.java      
+│   │   │   ├── ConsoleInterface.java       
+│   │   │   ├── EmojiDictionary.java      
+│   │   │   └── Translator.java   
+│   │   └── resources/      
+│   │       ├── emoji_mapping.json       
+│   │       ├── empty.json
+│   │       └── simpleTestFile.json
+│   └──test/
+│       ├── Apptest.java      
+│       ├── EmojiDictionaryTest.java     
+│       └── TranslatorTest.java
+├── target/                   
+├── .gitignore
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── pom.xml
+└── README.md
 
 ------------------------------------------------------------------
 
