@@ -7,6 +7,7 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 * **Run Anywhere:** We don't make assumptions about your OS. As long as you have Java installed, you can run Emojify anywhere—from your local terminal to a server environment.
 ------------------------------------------------------------------
 # Project Structure
+```bash
 │
 ├── src/
 │   ├── main/
@@ -23,6 +24,8 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 │       ├── Apptest.java      
 │       ├── EmojiDictionaryTest.java     
 │       └── TranslatorTest.java
+├── images/
+│   ├── main/
 ├── target/                   
 ├── .gitignore
 ├── CODE_OF_CONDUCT.md
@@ -30,6 +33,7 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 ├── LICENSE
 ├── pom.xml
 └── README.md
+```
 
 ------------------------------------------------------------------
 
@@ -104,7 +108,9 @@ java -jar target/EmojifyApp.jar
 
 **Output:**
 
-> 👋 world I ❤️ ☕ and 🍕
+> I ❤️ ☕ and 🍕 (i love java and pizza)
+
+![Example output](./images/KakaoTalk_20251212_032404085.png)
 
 You'll notice that keywords like **"Hello"**, **"love"**, **"java"**, and **"pizza"** were automatically translated.
 
