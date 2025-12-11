@@ -23,7 +23,11 @@ You can run the main application with IntelliJ, via Maven orthe Jar
 
 From maven:
 ```bash
+<<<<<<< HEAD
 mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
+=======
+    mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
+>>>>>>> 7f2192a3bd3c22d3d3fe7b13c3ca3bd5904a7565
 ```
 
 From the compiled jar
@@ -44,7 +48,7 @@ mvn test
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd emojify
+    cd Emojify
     ```
 3.  Build the project using Maven:
     ```bash
@@ -64,8 +68,14 @@ You can find the usage guide below.
 
 We have a simple example to get you started. Here is the command to run the tool:
 
+<<<<<<< HEAD
 
 java -jar target/EmojifyApp.jar
+=======
+```bash
+java -jar target/EmojifyApp.jar
+```
+>>>>>>> 7f2192a3bd3c22d3d3fe7b13c3ca3bd5904a7565
 
 ------------------------------------------------------------------
 
