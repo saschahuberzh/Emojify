@@ -25,7 +25,7 @@ Emojify is a lightweight command-line interface (CLI) tool for converting plain 
 │       ├── EmojiDictionaryTest.java     
 │       └── TranslatorTest.java
 ├── images/
-│   ├── main/
+│   └── KakaoTalk_20251212_032404085.png
 ├── target/                   
 ├── .gitignore
 ├── CODE_OF_CONDUCT.md
