@@ -1,25 +1,21 @@
 package org.emojify;
 
-import java.util.Map;
-import java.util.HashMap;
 import java.util.* ;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
 
 
 public class EmojiDictionaryTest {
 
-    private EmojiDictionary dictionary; // 필드로 선언
+    private EmojiDictionary dictionary; // Field declaration
 
-    // 각 @Test가 실행되기 전에 이 메서드가 실행됩니다.
     // this method is executed before each @Test executed.
     @BeforeEach
     void setUp() {
-        // 매번 새로운 객체를 생성하여 초기화합니다.
         // every time, I make new instance of EmojiDictionary and initialize it.
         this.dictionary = new EmojiDictionary(); 
     }
@@ -77,17 +73,14 @@ public class EmojiDictionaryTest {
         List<String> expectedList = new ArrayList<>() ;
         expectedList.add("love");
         expectedList.add("fire");
-        expectedList.add("done");
+        expectedList.add("done");   
 
-        for(String key : resultList){
-            System.out.println("key in dictionary: "+key);
-        }
-        System.out.println("");
-        for(String key : expectedList){
-            System.out.println("expected keys: "+key);
-        }        
+        // 1. Check if the count is 3 first
+        assertEquals(expectedList.size(), resultList.size(), "The size of key list is incorrect.");
 
-        assertEquals(expectedList, resultList, "The resulting List does not match the expected List."); 
+        // 2. Check if all contents of expectedList are included in resultList, regardless of order
+        // (assertTrue passes if the content inside the parentheses is 'true')
+        assertTrue(resultList.containsAll(expectedList), "The list does not contain all expected keys."); 
     }
 
     @Test // when file is empty, it should return empty List (bad end case)

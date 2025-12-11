@@ -68,4 +68,12 @@ public class TranslatorTest {
         Translator emptyTranslator = new Translator(null);
         assertEquals("hello", emptyTranslator.toEmoji("hello"));
     }
+
+    @Test
+    public void testRepeatedWords() {
+        // Check if all occurrences of the same word are replaced
+        String input = "happy happy";
+        String expected = "😀 😀";
+        assertEquals(expected, translator.toEmoji(input));
+    }
 }
