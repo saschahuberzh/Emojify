@@ -22,14 +22,19 @@ Emojify has been designed for ease of use from the start.
 You can run the main application with IntelliJ, via Maven orthe Jar
 
 From maven:
-mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
+```bash
+    mvn exec:java -Dexec.mainClass="com.emojify.App" -Dexec.args="Hello world I love java and pizza"
+```
 
 From the compiled jar
-java -jar target/Emojify-1.0-SNAPSHOT.jar "Hello world I love java and pizza"
+```bash
+java -jar target/EmojifyApp.jar
+```
 
 Execute unit tests to ensure everithing is working
+```bash
 mvn test
-
+```
 
 **Build from source:**
 
@@ -39,7 +44,7 @@ mvn test
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd emojify
+    cd Emojify
     ```
 3.  Build the project using Maven:
     ```bash
@@ -59,8 +64,9 @@ You can find the usage guide below.
 
 We have a simple example to get you started. Here is the command to run the tool:
 
-
-java -jar target/emojify-1.0.jar "Hello world I love java and pizza"
+```bash
+java -jar target/EmojifyApp.jar
+```
 
 ------------------------------------------------------------------
 
