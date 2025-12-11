@@ -71,7 +71,7 @@ public class TranslatorTest {
 
     @Test
     public void testRepeatedWords() {
-        // 같은 단어가 여러 번 나와도 다 바뀌는지 확인
+        // Check if all occurrences of the same word are replaced
         String input = "happy happy";
         String expected = "😀 😀";
         assertEquals(expected, translator.toEmoji(input));
