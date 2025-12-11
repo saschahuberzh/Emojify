@@ -73,15 +73,7 @@ public class EmojiDictionaryTest {
         List<String> expectedList = new ArrayList<>() ;
         expectedList.add("love");
         expectedList.add("fire");
-        expectedList.add("done");
-
-        for(String key : resultList){
-            System.out.println("key in dictionary: "+key);
-        }
-        System.out.println("");
-        for(String key : expectedList){
-            System.out.println("expected keys: "+key);
-        }        
+        expectedList.add("done");   
 
         // 1. Check if the count is 3 first
         assertEquals(expectedList.size(), resultList.size(), "The size of key list is incorrect.");
